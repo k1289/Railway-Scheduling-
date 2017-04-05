@@ -1,0 +1,10 @@
+<% @posts.each do |post| %>
+  <article class="post">
+    <h1><%= link_to post.title, post %></h1>
+    <p class="description"><%= post.description %></p>
+    <span>Published at: <%= post.published_at %></span>
+  </article>
+<% end %>
+<br />
+
+<%= link_to 'New Post', new_post_path %>
